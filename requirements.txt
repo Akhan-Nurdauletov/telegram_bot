@@ -24,7 +24,7 @@ PyPDF2==1.26.0
 pypiwin32==223
 pyttsx3==2.90
 pytz==2021.1
-pywin32==300
+pywin32
 six==1.16.0
 sqlparse==0.4.1
 virtualenv==20.8.1
