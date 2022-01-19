@@ -1,8 +1,9 @@
 import sqlite3 as sq
 from create_bot import bot
 
+base, cur = None
+
 def sql_start():
-    global base, cur
     base = sq.connect('pizza_cool.db')
     cur = base.cursor()
     if base:
