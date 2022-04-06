@@ -31,6 +31,12 @@ async def pizza_place_command(message : types.Message):
 async def contacts_command(message : types.Message):
     await bot.send_message(message.from_user.id, '+ 7 777 777 77 77')
 
+
+# @dp.message_handler(commands = ['Заказать'])
+# @dp.message_handler(Text(equals = 'Заказать', ignore_case = True))
+async def pizza_place_command(message : types.Message):
+    await bot.send_message(message.from_user.id, 'Elenberg, ST-675')
+
 def register_handlers_client(dp : Dispatcher):
     dp.register_message_handler(command_start, commands = ['start', 'help'])
     dp.register_message_handler(pizza_open_command, commands = ['Режим_работы'])

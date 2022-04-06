@@ -16,7 +16,7 @@ class FSMAdmin(StatesGroup):
     price = State()
 
 # Получаем ID текущего модератора
-@dp.message_handler(commands = ['moderator'], is_chat_admin = True)
+# @dp.message_handler(commands = ['moderator'], is_chat_admin = True)
 async def make_changes_command(message: types.Message):
     global ID
     ID = message.from_user.id
@@ -71,6 +71,7 @@ async def load_price(message : types.Message, state : FSMContext):
         
         await sqlite_db.sql_add_command(state)
         await state.finish()
+        await message.answer('Спасибо, товар добавлен!')
 
 
 # @dp.callback_query_handler(lambda x: x.data and x.data.startswith('del '))

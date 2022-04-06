@@ -4,7 +4,7 @@ from create_bot import bot
 
 
 def sql_start():
-    global cur, base
+    global base, cur
     base = sq.connect('pizza_cool.db')
     cur = base.cursor()
     if base:
